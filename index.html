@@ -537,6 +537,72 @@ input,select,textarea{font:inherit;color:inherit}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:10px}
 ::-webkit-scrollbar-thumb:hover{background:var(--dim)}
+
+/* Responsive refinements */
+@media (max-width:1100px){
+  .app{grid-template-columns:245px minmax(0,1fr)}
+  .sidebar{width:245px}
+  .main{min-width:0;padding:22px}
+  .car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:960px){
+  .app{display:block}
+  .sidebar{width:min(300px,86vw);height:100dvh;overflow-y:auto;inset-block:0;transform:translateX(-110%)}
+  html[dir="rtl"] .sidebar{transform:translateX(110%);inset-inline-end:0;inset-inline-start:auto}
+  .sidebar.open{transform:translateX(0)!important}
+  .main{width:100%;padding:16px 14px 36px}
+  .topbar{gap:12px;flex-wrap:wrap}
+  .search-box{flex:1 1 220px;min-width:0}
+  .topbar-actions{margin-inline-start:auto}
+  .tabs{display:flex;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;white-space:nowrap}
+  .tab{flex:0 0 auto}
+  .tab .tab-label{display:inline}
+  .panel{min-width:0}
+  .panel-head{gap:12px;flex-wrap:wrap}
+  .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .field.full{grid-column:1/-1}
+  .transfer-table{max-width:100%;overflow-x:auto}
+  .transfer-table table{min-width:600px}
+  .overlay.show{display:block;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:90}
+}
+@media (max-width:600px){
+  body{font-size:14px}
+  .main{padding:12px 10px 28px}
+  .topbar{padding:10px;gap:8px}
+  .mobile-menu-btn{flex:0 0 40px}
+  .search-box{flex-basis:calc(100% - 52px);order:2}
+  .topbar-actions{order:1;margin-inline-start:auto}
+  .search-hint{max-width:calc(100vw - 24px)}
+  .tabs{margin-block:12px;padding:4px;gap:4px}
+  .tab{padding:9px 11px;font-size:12px}
+  .tab .tab-label{display:inline}
+  .panel{padding:14px 12px;border-radius:12px}
+  .panel-head h1{font-size:18px;line-height:1.6}
+  .panel-head p{font-size:12px}
+  .count-badge{font-size:11px}
+  .car-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .car-tile{min-width:0}
+  .car-tile-img{height:118px}
+  .car-tile-info{padding:9px 8px 10px}
+  .car-tile-info h3{font-size:12px;overflow-wrap:anywhere}
+  .car-tile-meta{flex-wrap:wrap;font-size:10px}
+  .car-tile-price{gap:4px;align-items:flex-start;flex-wrap:wrap}
+  .car-tile-price b{font-size:11px}
+  .car-tile-price small{font-size:10px}
+  .form-card{padding:14px 11px}
+  .form-grid{grid-template-columns:minmax(0,1fr);gap:13px}
+  .field.full{grid-column:auto}
+  .form-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .form-actions .btn{width:100%;padding-inline:8px}
+  .transfer-table th,.transfer-table td{padding:9px 10px;font-size:11px}
+}
+@media (max-width:360px){
+  .car-grid{grid-template-columns:minmax(0,1fr)}
+  .car-tile-img{height:170px}
+  .topbar-actions .icon-btn{width:34px;height:34px}
+  .tab{padding:8px 9px}
+}
+
 </style>
 </head>
 <body>
