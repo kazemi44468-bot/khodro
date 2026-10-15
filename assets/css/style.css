@@ -300,3 +300,12 @@ nav a:hover,nav a.active,nav .nav-parent:hover{background:#edf4ff;color:#1d4ed8}
 @media(max-width:1000px){.request-main{padding:28px 24px}.request-layout{grid-template-columns:minmax(0,1.4fr) minmax(220px,.8fr);gap:14px}.request-form-card{padding:20px}.intro-side-note{display:none}}
 @media(max-width:760px){.request-app .side-menu{width:255px;transform:translateX(105%);transition:transform .25s;box-shadow:-15px 0 45px #0b122533}.request-app .side-menu.open{transform:translateX(0)}.side-menu-toggle{display:grid;place-items:center;position:fixed;top:14px;right:14px;width:40px;height:40px;border:1px solid #dce4ef;border-radius:12px;background:#fff;color:#1d2a40;z-index:50;font-size:18px;box-shadow:0 5px 15px #17203310}.request-main{margin-right:0;padding:76px 15px 24px}.request-intro{gap:12px;padding-bottom:20px}.intro-mark{width:43px;height:43px;flex-basis:43px;border-radius:13px;font-size:15px}.request-intro h1{font-size:22px}.request-intro p{font-size:11px}.request-layout{grid-template-columns:1fr;padding-top:16px;gap:13px}.request-form-card{padding:17px 14px}.form-card-heading{margin-bottom:16px;padding-bottom:14px}.request-app .form-grid{grid-template-columns:1fr;gap:13px}.request-app .form-grid .full{grid-column:auto}.request-app .field input,.request-app .field select,.request-app .field textarea{font-size:13px}.request-app .form-actions{align-items:stretch;flex-direction:column}.btn-submit{width:100%}.request-aside{padding:18px}.request-aside h2{margin-bottom:14px}.process-list li{padding-bottom:15px}.privacy-note{font-size:9px}.request-app .side-menu{padding-top:22px}}
 @media(min-width:761px){.request-main{min-height:100vh}.request-app .side-menu{transform:none}}
+
+/* Conditional private request form */
+.request-app .conditional-fields{margin-top:22px;padding-top:18px;border-top:1px solid #edf0f5}
+.request-app .conditional-fields h3{font-size:13px;margin:0 0 15px;color:#273850}
+.request-app .conditional-fields.hidden{display:none!important}
+.request-app .additional-notes{margin-top:18px}
+.request-app .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.request-app .form-grid .full{grid-column:1/-1}
+@media(max-width:760px){.request-app .form-grid{grid-template-columns:1fr}.request-app .form-grid .full{grid-column:auto}}
