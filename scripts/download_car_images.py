@@ -69,7 +69,7 @@ for item in photos:
     image_url = item["url"]
     separator = "&" if "?" in image_url else "?"
     image_url = image_url + separator + urllib.parse.urlencode({
-        "auto": "format", "fit": "crop", "w": 1200, "q": 82
+        "fm": "jpg", "fit": "crop", "w": 1200, "q": 82
     })
     try:
         req = urllib.request.Request(image_url, headers={"User-Agent": HEADERS["User-Agent"]})
