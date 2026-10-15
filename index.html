@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101827">
-<title>ثبت درخواست | خودرو+</title>
-<meta name="description" content="درخواست خود را برای بررسی و هماهنگی درباره معامله خودرو یا حواله ارسال کنید.">
+<title>ثبت درخواست | خودرو پلاس</title>
+<meta name="description" content="ثبت خصوصی درخواست خرید، فروش، حواله یا مشاوره خودرو در خودرو پلاس.">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="request-app">
@@ -15,19 +15,15 @@
   <a class="side-link active" href="#request"><span class="side-link-icon">＋</span> ثبت درخواست</a>
   <a class="side-link" href="#how-it-works"><span class="side-link-icon">↗</span> روند پیگیری</a>
   <a class="side-link" href="mailto:kazemi44468@gmail.com"><span class="side-link-icon">✉</span> ارتباط با ما</a>
-  <div class="side-menu-note"><span class="status-dot"></span><span>درخواست شما مستقیماً برای بررسی ارسال می‌شود.</span></div>
+  <div class="side-menu-note"><span class="status-dot"></span><span>جزئیات خودروها و گزینه‌های معامله به‌صورت عمومی منتشر نمی‌شوند.</span></div>
   <div class="side-menu-bottom">خودرو پلاس</div>
 </aside>
 <button class="side-menu-toggle" id="sideMenuToggle" type="button" aria-expanded="false" aria-controls="sideMenu" aria-label="باز و بسته کردن منو">☰</button>
 <main class="request-main">
   <section class="request-intro" id="request">
     <div class="intro-mark">خ+</div>
-    <div class="intro-copy">
-      <span class="intro-eyebrow">ثبت درخواست</span>
-      <h1>چطور می‌توانیم کمکتان کنیم؟</h1>
-      <p>اطلاعات اولیه را وارد کنید تا درخواست شما بررسی شود و برای ادامه هماهنگی با شما تماس بگیریم.</p>
-    </div>
-    <div class="intro-side-note"><span class="status-dot"></span> پاسخ‌گویی پس از بررسی درخواست</div>
+    <div class="intro-copy"><span class="intro-eyebrow">ثبت درخواست خصوصی</span><h1>درخواست خود را ثبت کنید</h1><p>نوع درخواست را انتخاب کنید؛ فرم، اطلاعات مرتبط را برای تکمیل نمایش می‌دهد.</p></div>
+    <div class="intro-side-note"><span class="status-dot"></span> بررسی و هماهنگی مستقیم</div>
   </section>
   <section class="request-layout">
     <div class="request-form-card">
@@ -35,31 +31,69 @@
       <form id="requestForm">
         <input type="hidden" name="_subject" value="درخواست جدید از وب‌سایت خودرو پلاس">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true">
         <div class="form-grid">
           <div class="field"><label for="fullName">نام و نام خانوادگی <b>*</b></label><input id="fullName" name="نام و نام خانوادگی" autocomplete="name" required placeholder="نام شما"></div>
           <div class="field"><label for="phone">شماره تماس <b>*</b></label><input id="phone" name="شماره تماس" type="tel" inputmode="tel" autocomplete="tel" required placeholder="مثلاً ۰۹۱۲۱۲۳۴۵۶۷"></div>
-          <div class="field full"><label for="requestType">موضوع درخواست <b>*</b></label><select id="requestType" name="موضوع درخواست" required><option value="" selected disabled>موضوع را انتخاب کنید</option><option>درخواست خرید</option><option>درخواست فروش</option><option>درخواست مربوط به حواله</option><option>مشاوره و هماهنگی</option><option>موضوع دیگر</option></select></div>
-          <div class="field"><label for="city">شهر</label><input id="city" name="شهر" autocomplete="address-level2" placeholder="شهر محل سکونت"></div>
-          <div class="field"><label for="contactTime">زمان مناسب تماس</label><select id="contactTime" name="زمان مناسب تماس"><option value="">فرقی ندارد</option><option>صبح</option><option>ظهر</option><option>عصر</option></select></div>
-          <div class="field full"><label for="details">توضیحات درخواست</label><textarea id="details" name="توضیحات درخواست" rows="5" placeholder="هر نکته‌ای که برای بررسی درخواست لازم است بنویسید."></textarea></div>
+          <div class="field full"><label for="requestType">نوع درخواست <b>*</b></label><select id="requestType" name="نوع درخواست" required><option value="" selected disabled>نوع درخواست را انتخاب کنید</option><option value="خرید خودرو">درخواست خرید خودرو</option><option value="فروش خودرو">درخواست فروش خودرو</option><option value="حواله خودرو">درخواست مربوط به حواله</option><option value="مشاوره و هماهنگی">مشاوره و هماهنگی</option><option value="سایر">موضوع دیگر</option></select></div>
+          <div class="field"><label for="city">شهر موردنظر</label><input id="city" name="شهر موردنظر" autocomplete="address-level2" placeholder="مثلاً تهران"></div>
+          <div class="field"><label for="contactTime">زمان مناسب تماس</label><select id="contactTime" name="زمان مناسب تماس"><option value="">فرقی ندارد</option><option>صبح (۹ تا ۱۲)</option><option>ظهر (۱۲ تا ۱۵)</option><option>عصر (۱۵ تا ۱۹)</option></select></div>
         </div>
-        <div class="form-actions"><p>اطلاعات شما برای بررسی همین درخواست استفاده می‌شود.</p><button class="btn-submit" id="submitRequest" type="submit"><span>ارسال درخواست</span><span aria-hidden="true">←</span></button></div>
+        <section class="conditional-fields hidden" id="vehicleFields" aria-labelledby="vehicleHeading">
+          <h3 id="vehicleHeading">مشخصات خودرو</h3>
+          <div class="form-grid">
+            <div class="field"><label for="brand">برند خودرو</label><select id="brand" name="برند خودرو"><option value="">انتخاب برند</option></select></div>
+            <div class="field"><label for="model">مدل خودرو</label><select id="model" name="مدل خودرو" disabled><option value="">ابتدا برند را انتخاب کنید</option></select></div>
+            <div class="field"><label for="year">سال ساخت</label><select id="year" name="سال ساخت"><option value="">فرقی ندارد</option></select></div>
+            <div class="field"><label for="trim">تیپ / نسخه</label><input id="trim" name="تیپ یا نسخه" placeholder="مثلاً اتوماتیک، توربو، فول"></div>
+            <div class="field"><label for="budget" id="budgetLabel">بودجه یا قیمت مدنظر (تومان)</label><input id="budget" name="بودجه یا قیمت مدنظر (تومان)" inputmode="numeric" placeholder="مبلغ تقریبی"></div>
+            <div class="field"><label for="mileage">کارکرد (کیلومتر)</label><input id="mileage" name="کارکرد (کیلومتر)" inputmode="numeric" placeholder="در صورت اطلاع"></div>
+            <div class="field"><label for="condition">وضعیت خودرو</label><select id="condition" name="وضعیت خودرو"><option value="">انتخاب وضعیت</option><option>صفر کیلومتر</option><option>کارکرده</option><option>تصادفی / نیازمند بررسی</option><option>فرقی ندارد</option></select></div>
+            <div class="field"><label for="color">رنگ موردنظر / خودرو</label><input id="color" name="رنگ موردنظر یا خودرو" placeholder="مثلاً سفید"></div>
+          </div>
+        </section>
+        <section class="conditional-fields hidden" id="transferFields" aria-labelledby="transferHeading">
+          <h3 id="transferHeading">اطلاعات حواله</h3>
+          <div class="form-grid">
+            <div class="field"><label for="company">شرکت / عرضه‌کننده</label><input id="company" name="شرکت یا عرضه‌کننده حواله" placeholder="مثلاً ایران‌خودرو، سایپا، بهمن موتور"></div>
+            <div class="field"><label for="transferType">نوع حواله</label><select id="transferType" name="نوع حواله"><option value="">انتخاب کنید</option><option>حواله ثبت‌نامی</option><option>حواله پیش‌فروش</option><option>حواله فروش فوق‌العاده</option><option>حواله تخصیص‌یافته</option><option>سایر</option></select></div>
+            <div class="field"><label for="delivery">موعد تحویل</label><input id="delivery" name="موعد تحویل حواله" placeholder="ماه و سال تقریبی"></div>
+            <div class="field"><label for="transferPrice">مبلغ یا شرایط مالی (تومان)</label><input id="transferPrice" name="مبلغ یا شرایط مالی حواله" placeholder="در صورت اطلاع"></div>
+          </div>
+        </section>
+        <section class="conditional-fields hidden" id="saleFields" aria-labelledby="saleHeading">
+          <h3 id="saleHeading">جزئیات فروش</h3>
+          <div class="form-grid">
+            <div class="field"><label for="ownership">وضعیت مالکیت</label><select id="ownership" name="وضعیت مالکیت"><option value="">انتخاب کنید</option><option>به نام خودم</option><option>به نام شخص دیگر</option><option>نماینده مالک</option></select></div>
+            <div class="field"><label for="saleUrgency">زمان مدنظر برای فروش</label><select id="saleUrgency" name="زمان مدنظر برای فروش"><option value="">انتخاب کنید</option><option>در اسرع وقت</option><option>تا یک ماه آینده</option><option>عجله‌ای ندارم</option></select></div>
+          </div>
+        </section>
+        <section class="conditional-fields hidden" id="buyFields" aria-labelledby="buyHeading">
+          <h3 id="buyHeading">ترجیحات خرید</h3>
+          <div class="form-grid">
+            <div class="field"><label for="purchaseTime">زمان مدنظر خرید</label><select id="purchaseTime" name="زمان مدنظر خرید"><option value="">انتخاب کنید</option><option>در اسرع وقت</option><option>تا یک ماه آینده</option><option>در حال بررسی</option></select></div>
+            <div class="field"><label for="payment">روش پرداخت مدنظر</label><select id="payment" name="روش پرداخت مدنظر"><option value="">انتخاب کنید</option><option>نقدی</option><option>ترکیب نقد و معاوضه</option><option>نیازمند بررسی شرایط</option></select></div>
+          </div>
+        </section>
+        <div class="form-grid additional-notes">
+          <div class="field full"><label for="details">توضیحات تکمیلی</label><textarea id="details" name="توضیحات تکمیلی" rows="4" placeholder="شرایط، مشخصات یا نکته‌ای که به بررسی بهتر درخواست کمک می‌کند."></textarea></div>
+        </div>
+        <div class="form-actions"><p>اطلاعات ثبت‌شده در فهرست عمومی خودروها نمایش داده نمی‌شود.</p><button class="btn-submit" id="submitRequest" type="submit"><span>ارسال درخواست</span><span aria-hidden="true">←</span></button></div>
         <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
       </form>
     </div>
     <aside class="request-aside" id="how-it-works">
-      <div class="aside-icon">↗</div>
-      <h2>بعد از ارسال چه می‌شود؟</h2>
+      <div class="aside-icon">↗</div><h2>بعد از ارسال چه می‌شود؟</h2>
       <ol class="process-list">
-        <li><span>۱</span><div><strong>دریافت درخواست</strong><p>اطلاعات شما برای بررسی ارسال می‌شود.</p></div></li>
-        <li><span>۲</span><div><strong>بررسی و هماهنگی</strong><p>در صورت نیاز، برای تکمیل اطلاعات با شما تماس می‌گیریم.</p></div></li>
-        <li><span>۳</span><div><strong>گفت‌وگوی متناسب با درخواست</strong><p>جزئیات و گزینه‌های مرتبط در گفت‌وگوی مستقیم بررسی می‌شوند.</p></div></li>
+        <li><span>۱</span><div><strong>دریافت درخواست</strong><p>اطلاعات برای بررسی به نشانی ارتباطی مجموعه ارسال می‌شود.</p></div></li>
+        <li><span>۲</span><div><strong>بررسی و هماهنگی</strong><p>در صورت نیاز، برای تکمیل جزئیات با شما تماس می‌گیریم.</p></div></li>
+        <li><span>۳</span><div><strong>گفت‌وگوی مستقیم</strong><p>گزینه‌ها و شرایط متناسب با درخواست، خصوصی بررسی می‌شوند.</p></div></li>
       </ol>
-      <div class="aside-contact"><span>ترجیح می‌دهید ایمیل بزنید؟</span><a href="mailto:kazemi44468@gmail.com">kazemi44468@gmail.com</a></div>
+      <div class="aside-contact"><span>ارتباط از طریق ایمیل</span><a href="mailto:kazemi44468@gmail.com">kazemi44468@gmail.com</a></div>
     </aside>
   </section>
-  <p class="privacy-note"><span>◆</span> اطلاعات درخواست شما در صفحه عمومی نمایش داده نمی‌شود.</p>
+  <p class="privacy-note"><span>◆</span> خودروها و جزئیات خریدوفروش به‌صورت عمومی فهرست نمی‌شوند.</p>
 </main>
 <script src="assets/js/app.js"></script>
 </body>
