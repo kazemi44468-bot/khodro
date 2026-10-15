@@ -154,3 +154,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .nav-parent{font-family:inherit;background:transparent;border:0;color:#46534d;line-height:1.8}
 .nav-parent.active{background:#eaf0eb;color:#173f38}
 .nav-group.expanded .subnav{display:grid}
+
+
+.page-hero .panel{position:relative;overflow:hidden;background-color:#f3f5f0;background-image:linear-gradient(270deg,#f7f9f5 0%,#f7f9f5ed 43%,#f7f9f57a 100%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1500&q=82');background-position:center;background-size:cover}
+.page-hero .panel>*{position:relative;z-index:1}
+.car-image img{background:#e8ece7}
+@media(min-width:721px){.page-hero .panel{min-height:145px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.page-hero .panel p{max-width:640px}}
