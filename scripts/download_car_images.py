@@ -88,6 +88,38 @@ for item in photos:
         print(f"Download failed for {item['id']}: {exc}")
     time.sleep(0.2)
 
+# Rewrite website image references to use the downloaded local files.
+import re
+if downloaded:
+    html_files = [ROOT / "index.html"] + sorted((ROOT / "pages").glob("*.html"))
+    for html_path in html_files:
+        if not html_path.exists():
+            continue
+        html = html_path.read_text(encoding="utf-8")
+        local_prefix = "assets/images/" if html_path.name == "index.html" else "../assets/images/"
+        counter = [0]
+        def localize_img(match):
+            tag = match.group(0)
+            if "images.unsplash.com/" not in tag:
+                return tag
+            counter[0] += 1
+            filename = downloaded[(counter[0] - 1) % len(downloaded)]["file"]
+            return re.sub(r'src=(["\'])https://images\.unsplash\.com/[^"\']+\1',
+                          lambda m: "src=" + m.group(1) + local_prefix + filename + m.group(1),
+                          tag)
+        html = re.sub(r'<img\b[^>]*>', localize_img, html, flags=re.IGNORECASE)
+        html_path.write_text(html, encoding="utf-8")
+
+    css_path = ROOT / "assets" / "css" / "style.css"
+    if css_path.exists():
+        css = css_path.read_text(encoding="utf-8")
+        css = re.sub(
+            r"https://images\.unsplash\.com/[^'\")\s]+",
+            "../images/" + downloaded[0]["file"],
+            css,
+        )
+        css_path.write_text(css, encoding="utf-8")
+
 # Keep the output deterministic and ensure stale files from earlier runs do not remain.
 for old in OUT.glob("car-*.jpg"):
     if old.name not in {p["file"] for p in downloaded}:
