@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#ffffff">
 <title>خودرو+ | معامله‌گر خودرو و حواله</title>
-<meta name="description" content="پلتفرم معامله خودرو و حواله — جستجو، ثبت، پیگیری در یک صفحه">
+<meta name="description" content="معرفی خودروها و سامان‌دهی درخواست‌های خرید، فروش و حواله">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -654,8 +654,8 @@ input,select,textarea{font:inherit;color:inherit}
 
     <div class="sidebar-cta">
       <b>ثبت سریع آگهی</b>
-      <p>خودرو یا حواله‌ات را در چند ثانیه معرفی کن.</p>
-      <button onclick="document.querySelector('[data-tab=sell]').click()">شروع ثبت</button>
+      <p>برای ثبت اطلاعات اولیه به صفحه اختصاصی مراجعه کن.</p>
+      <a class="btn btn-primary" href="pages/sell.html">شروع ثبت</a>
     </div>
   </aside>
 
@@ -701,13 +701,13 @@ input,select,textarea{font:inherit;color:inherit}
       <div class="panel-head">
         <div>
           <h1>خرید خودرو <span class="badge-buy">داخلی و خارجی</span></h1>
-          <p>خودروهای موجود را مرور کن و درخواست بازدید ثبت کن.</p>
+          <p>مدل‌ها را بشناس و برای دیدن مشخصات کامل وارد بانک خودرو شو.</p>
         </div>
         <div class="count-badge" id="buyCount">۴ خودرو</div>
       </div>
 
       <div class="car-grid" id="buyGrid">
-        <article class="car-tile" data-name="دنا پلاس توربو">
+        <article class="car-tile" data-name="دنا پلاس" data-href="pages/dena-plus.html">
           <div class="car-tile-img">
             <span class="tile-badge domestic">داخلی</span>
             <img loading="lazy" src="assets/images/car-02.jpg" alt="دنا پلاس توربو">
@@ -719,7 +719,7 @@ input,select,textarea{font:inherit;color:inherit}
           </div>
         </article>
 
-        <article class="car-tile" data-name="تارا اتوماتیک">
+        <article class="car-tile" data-name="تارا" data-href="pages/tara.html">
           <div class="car-tile-img">
             <span class="tile-badge domestic">داخلی</span>
             <img loading="lazy" src="assets/images/car-03.jpg" alt="تارا اتوماتیک">
@@ -731,26 +731,26 @@ input,select,textarea{font:inherit;color:inherit}
           </div>
         </article>
 
-        <article class="car-tile" data-name="خودروی خارجی">
+        <article class="car-tile" data-name="شاهین" data-href="pages/shahin.html">
           <div class="car-tile-img">
             <span class="tile-badge foreign">خارجی</span>
-            <img loading="lazy" src="assets/images/car-05.jpg" alt="خودروی خارجی">
+            <img loading="lazy" src="assets/images/car-05.jpg" alt="خودروی شاهین">
           </div>
           <div class="car-tile-info">
-            <h3>خودروهای خارجی</h3>
-            <div class="car-tile-meta"><span>وارداتی</span><span>تنوع مدل</span></div>
+            <h3>شاهین</h3>
+            <div class="car-tile-meta"><span>سایپا</span><span>سدان</span></div>
             <div class="car-tile-price"><b>تماس بگیرید</b><small>جزئیات ←</small></div>
           </div>
         </article>
 
-        <article class="car-tile" data-name="مدل‌های متنوع">
+        <article class="car-tile" data-name="کوییک" data-href="pages/quick.html">
           <div class="car-tile-img">
             <span class="tile-badge domestic">منتخب</span>
-            <img loading="lazy" src="assets/images/car-06.jpg" alt="مدل‌های متنوع">
+            <img loading="lazy" src="assets/images/car-06.jpg" alt="خودروی کوییک">
           </div>
           <div class="car-tile-info">
-            <h3>مدل‌های متنوع</h3>
-            <div class="car-tile-meta"><span>داخلی و خارجی</span></div>
+            <h3>کوییک</h3>
+            <div class="car-tile-meta"><span>سایپا</span><span>هاچ‌بک</span></div>
             <div class="car-tile-price"><b>تماس بگیرید</b><small>جزئیات ←</small></div>
           </div>
         </article>
@@ -766,7 +766,7 @@ input,select,textarea{font:inherit;color:inherit}
         </div>
       </div>
 
-      <form class="form-card" onsubmit="event.preventDefault();alert('درخواست فروش خودرو ثبت شد (نمایشی)')">
+      <form class="form-card" onsubmit="event.preventDefault();alert('در نسخه فعلی، فرم به سامانه ثبت اطلاعات متصل نیست و اطلاعات ذخیره نمی‌شود.')">
         <div class="form-grid">
           <div class="field">
             <label>برند و مدل <span>*</span></label>
@@ -804,49 +804,19 @@ input,select,textarea{font:inherit;color:inherit}
     <section class="panel" data-panel="buyTransfer">
       <div class="panel-head">
         <div>
-          <h1>خرید حواله <span class="badge-transfer">نرخ روز</span></h1>
-          <p>حواله‌های فعال خودرو را با نرخ لحظه‌ای مقایسه کن.</p>
+          <h1>خرید حواله <span class="badge-transfer">بررسی شرایط</span></h1>
+          <p>در این صفحه قیمت یا حواله فعالِ تأییدشده نمایش داده نمی‌شود؛ برای بررسی شرایط، صفحه اختصاصی را ببین.</p>
         </div>
-        <div class="count-badge">به‌روزرسانی: امروز</div>
+        <div class="count-badge">بدون داده زنده بازار</div>
       </div>
 
-      <div class="transfer-table">
-        <table>
-          <thead>
-            <tr>
-              <th>خودرو</th>
-              <th>نوع حواله</th>
-              <th>مبلغ (تومان)</th>
-              <th>تغییر</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="car-name">دنا پلاس توربو</td>
-              <td>تحویل ۳۰ روزه</td>
-              <td class="price">۸۵۰,۰۰۰,۰۰۰</td>
-              <td class="change up">▲ ۲.۳٪</td>
-              <td><a class="action" href="pages/buy-transfer.html">درخواست ←</a></td>
-            </tr>
-            <tr>
-              <td class="car-name">تارا اتوماتیک</td>
-              <td>تحویل ۴۵ روزه</td>
-              <td class="price">۱,۲۰۰,۰۰۰,۰۰۰</td>
-              <td class="change down">▼ ۱.۱٪</td>
-              <td><a class="action" href="pages/buy-transfer.html">درخواست ←</a></td>
-            </tr>
-            <tr>
-              <td class="car-name">شاهین G</td>
-              <td>تحویل ۶۰ روزه</td>
-              <td class="price">۹۸۰,۰۰۰,۰۰۰</td>
-              <td class="change up">▲ ۰.۸٪</td>
-              <td><a class="action" href="pages/buy-transfer.html">درخواست ←</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <div class="form-card">
+        <p>قیمت حواله و زمان تحویل به بخشنامه، تیپ خودرو، قرارداد و شرایط انتقال وابسته است. بدون اطلاعات معتبر و به‌روز، مبلغ یا درصد تغییر درج نمی‌شود.</p>
+        <div class="form-actions">
+          <a class="btn btn-primary" href="pages/buy-transfer.html">درخواست بررسی خرید حواله</a>
+          <a class="btn btn-ghost" href="pages/transfers.html">مشاهده بخش حواله‌ها</a>
+        </div>
+      </div>    </section>
 
     <!-- ====== PANEL: SELL TRANSFER ====== -->
     <section class="panel" data-panel="sellTransfer">
@@ -857,7 +827,7 @@ input,select,textarea{font:inherit;color:inherit}
         </div>
       </div>
 
-      <form class="form-card" onsubmit="event.preventDefault();alert('حواله شما ثبت شد (نمایشی)')">
+      <form class="form-card" onsubmit="event.preventDefault();alert('در نسخه فعلی، فرم به سامانه ثبت اطلاعات متصل نیست و اطلاعات ذخیره نمی‌شود.')">
         <div class="form-grid">
           <div class="field">
             <label>نوع خودرو <span>*</span></label>
@@ -970,10 +940,10 @@ function filterCars(q){
 
 /* ========== CAR TILE CLICK ========== */
 document.querySelectorAll('.car-tile').forEach(tile=>{
-  tile.addEventListener('click', ()=>{
-    const name = tile.dataset.name;
-    console.log('مشاهده:', name);
-  });
+  tile.setAttribute('tabindex','0');
+  tile.setAttribute('role','link');
+  tile.addEventListener('click', ()=>{ if(tile.dataset.href) window.location.href=tile.dataset.href; });
+  tile.addEventListener('keydown', e=>{ if((e.key==='Enter'||e.key===' ')&&tile.dataset.href){e.preventDefault();window.location.href=tile.dataset.href;} });
 });
 </script>
 </body>
