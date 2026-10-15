@@ -35,5 +35,6 @@ jobs:
             echo "No image changes to commit."
           else
             git commit -m "Add 50 locally stored automotive photographs"
+            git pull --rebase origin main
             git push
           fi
