@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download 50 car photographs from Wikimedia Commons and use local site assets."""
+"""Download 50 relevant, license-attributed automotive photographs from Wikimedia Commons."""
 import json
 import re
 import time
@@ -15,14 +15,19 @@ HEADERS = {
     "Accept": "application/json",
 }
 QUERIES = [
-    ("car", 16), ("automobile", 10), ("SUV", 8), ("sedan car", 6),
-    ("Peugeot car", 4), ("Toyota car", 3), ("Hyundai car", 3),
+    ("car", 12), ("sports car", 6), ("SUV", 6), ("sedan", 5),
+    ("Peugeot car", 5), ("Toyota car", 5), ("Hyundai car", 5),
+    ("Kia car", 3), ("Renault car", 3), ("BMW car", 3),
+    ("Iranian car", 3), ("Saipa car", 3), ("Iran Khodro car", 3),
+    ("car showroom", 4), ("car interior", 3), ("Mercedes-Benz car", 4),
 ]
+RELEVANT = re.compile(r"\b(car|cars|automobile|automobiles|vehicle|vehicles|suv|sedan|coupe|hatchback|convertible|roadster|sports car|pickup|peugeot|toyota|hyundai|kia|renault|bmw|audi|mercedes|volkswagen|porsche|ferrari|mazda|mitsubishi|chevrolet|honda|lexus|fiat|opel|volvo|skoda|citroen|dacia|saipa|samand|dena|tara|shahin|pride|quick|chery|jac|haval|mahindra|mvm|arizo|kmc)\b", re.I)
+EXCLUDED = re.compile(r"\b(accident|crash|wreck|abandoned|damaged|burned|burnt|traffic jam|skyline|skytrain|train station|railway|bus station|car park|parking lot|street view|road view|building|landmark|monument|church|palace|belltower|tram|train|toy car|model car|drawing|illustration|diagram)\b", re.I)
 seen, candidates = set(), []
 
 def fetch_json(url):
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=40) as response:
+    with urllib.request.urlopen(req, timeout=20) as response:
         return json.loads(response.read().decode("utf-8"))
 
 def meta_value(meta, key):
@@ -33,7 +38,7 @@ for query, wanted in QUERIES:
     params = {
         "action": "query", "generator": "search",
         "gsrsearch": "filetype:bitmap " + query, "gsrnamespace": 6,
-        "gsrlimit": min(50, wanted * 5), "prop": "imageinfo",
+        "gsrlimit": 50, "prop": "imageinfo",
         "iiprop": "url|mime|extmetadata", "iiurlwidth": 1200, "format": "json",
     }
     try:
@@ -48,12 +53,16 @@ for query, wanted in QUERIES:
             if info.get("mime") != "image/jpeg":
                 continue
             pageid, title = page.get("pageid"), page.get("title", "")
+            meta = info.get("extmetadata") or {}
+            description = meta_value(meta, "ImageDescription")
+            searchable = title + " " + description
+            if not RELEVANT.search(searchable) or EXCLUDED.search(searchable):
+                continue
             if not pageid or pageid in seen:
                 continue
             thumb = info.get("thumburl") or info.get("url")
             if not thumb:
                 continue
-            meta = info.get("extmetadata") or {}
             seen.add(pageid)
             candidates.append({
                 "pageid": pageid, "query": query, "title": title, "url": thumb,
@@ -62,7 +71,7 @@ for query, wanted in QUERIES:
                 "credit": meta_value(meta, "Credit"),
                 "license": meta_value(meta, "LicenseShortName"),
                 "license_url": meta_value(meta, "LicenseUrl"),
-                "description": meta_value(meta, "ImageDescription"),
+                "description": description,
                 "original_url": info.get("descriptionurl", ""),
             })
             found += 1
@@ -70,7 +79,7 @@ for query, wanted in QUERIES:
                 break
     except Exception as exc:
         print(f"Commons search failed for {query!r}: {exc}")
-    time.sleep(0.6)
+    time.sleep(0.35)
 
 downloaded = []
 for item in candidates:
@@ -79,7 +88,7 @@ for item in candidates:
     filename = f"car-{len(downloaded) + 1:02d}.jpg"
     try:
         req = urllib.request.Request(item["url"], headers={"User-Agent": HEADERS["User-Agent"]})
-        with urllib.request.urlopen(req, timeout=45) as response:
+        with urllib.request.urlopen(req, timeout=30) as response:
             content_type, blob = response.headers.get("Content-Type", ""), response.read()
         if content_type.split(";")[0].strip() not in ("image/jpeg", "image/jpg") or len(blob) < 10000:
             print(f"Skip invalid image {item['title']}: {content_type}, {len(blob)} bytes")
@@ -90,12 +99,11 @@ for item in candidates:
         print(f"Saved {filename} ({len(blob)} bytes) — {item['title']}")
     except Exception as exc:
         print(f"Download failed for {item['title']}: {exc}")
-    time.sleep(0.15)
+    time.sleep(0.1)
 
 if len(downloaded) < 50:
-    raise SystemExit(f"Expected 50 images, downloaded {len(downloaded)}. Only verified JPEGs are accepted.")
+    raise SystemExit(f"Expected 50 relevant images, downloaded {len(downloaded)}. Check query results.")
 
-# Localize image references in all pages.
 for html_path in [ROOT / "index.html"] + sorted((ROOT / "pages").glob("*.html")):
     if not html_path.exists():
         continue
