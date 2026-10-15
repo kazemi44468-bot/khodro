@@ -145,3 +145,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
  .form-grid{grid-template-columns:1fr}
  .form-grid .full{grid-column:auto}
 }
+
+
+@font-face{font-family:VazirmatnLocal;src:url('../fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:VazirmatnLocal;src:url('../fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500 600;font-style:normal;font-display:swap}
+@font-face{font-family:VazirmatnLocal;src:url('../fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700 800;font-style:normal;font-display:swap}
+@font-face{font-family:VazirmatnLocal;src:url('../fonts/Vazirmatn-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+.nav-parent{font-family:inherit;background:transparent;border:0;color:#46534d;line-height:1.8}
+.nav-parent.active{background:#eaf0eb;color:#173f38}
+.nav-group.expanded .subnav{display:grid}
