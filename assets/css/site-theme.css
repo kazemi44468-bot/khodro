@@ -1,0 +1,21 @@
+/* هویت بصری یکپارچه مرکز خرید خودرو و حواله */
+@font-face{font-family:Vazirmatn;src:url('../fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url('../fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url('../fonts/Vazirmatn-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url('../fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+:root{--brand:#176b63;--brand-deep:#104e49;--gold:#c5a15b;--ink:#172b2a;--muted:#647572;--paper:#f4f7f6;--line:#dfe8e5}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif!important;color:var(--ink);background-color:var(--paper);background-image:radial-gradient(ellipse at 10% 0%,rgba(197,161,91,.10),transparent 34%),radial-gradient(ellipse at 95% 20%,rgba(23,107,99,.08),transparent 32%);line-height:1.85}
+h1,h2,h3,h4,button,input,select,textarea{font-family:Vazirmatn,Tahoma,sans-serif}
+h1,h2,h3{letter-spacing:-.025em}
+a{transition:color .18s ease,background-color .18s ease,border-color .18s ease}
+img{max-width:100%;height:auto}
+header,nav,aside,[class*="sidebar"],[class*="menu"]{background-image:linear-gradient(135deg,rgba(16,78,73,.97),rgba(23,107,99,.96)),url('../images/menu-texture.jpg');background-size:cover;background-position:center;color:#fff}
+header a,nav a,aside a,[class*="sidebar"] a,[class*="menu"] a{color:inherit}
+main{min-width:0}
+main section,main article,.content-card,.card,.panel{border-radius:14px}
+button,[type=submit]{transition:transform .18s ease,box-shadow .18s ease}
+button:hover,[type=submit]:hover{transform:translateY(-1px)}
+input,select,textarea{max-width:100%;border-color:#d7e2df}
+:focus-visible{outline:3px solid rgba(197,161,91,.65);outline-offset:2px}
+@media(max-width:767px){body{font-size:14px}h1{font-size:1.65rem!important}h2{font-size:1.3rem!important}main{padding-left:14px!important;padding-right:14px!important}header{max-width:100%}}
