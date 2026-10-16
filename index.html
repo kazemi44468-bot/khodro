@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<title>خودرو+ | بانک اطلاعات خودرو و خرید</title>
-<meta name="description" content="گردآوری اطلاعات خودروها و راهنمای بررسی پیش از خرید">
+<title>مرکز خرید خودرو و حواله | مرکز خرید خودرو و حواله</title>
+<meta name="description" content="مرکز خرید خودرو و حواله؛ گردآوری اطلاعات خودروها، مشخصات مدل‌ها و راهنمای بررسی پیش از خرید.">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -603,6 +603,58 @@ input,select,textarea{font:inherit;color:inherit}
   .tab{padding:8px 9px}
 }
 
+
+@font-face{font-family:'Vazirmatn';src:url('assets/fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('assets/fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('assets/fonts/Vazirmatn-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('assets/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700 900;font-style:normal;font-display:swap}
+:root{--acc:#176b63;--acc-2:#24887c;--acc-soft:#e8f5f2;--buy:#176b63;--buy-soft:#e8f5f2;--transfer:#c58b37;--transfer-soft:#fff5e5;--transfer-deep:#98651e;--bg:#f5f7f8;--surface:#fff;--surface-2:#eef3f4;--line:#dfe7e8;--line-2:#cbd9d9;--txt:#1d2c32;--txt-2:#617278;--dim:#8a9a9f;--shadow:0 5px 18px rgba(23,61,61,.07);--shadow-md:0 12px 30px rgba(23,61,61,.1)}
+body{font-family:'Vazirmatn',Tahoma,sans-serif}
+.app{grid-template-columns:272px minmax(0,1fr);max-width:1500px}
+.sidebar{position:sticky;isolation:isolate;background:linear-gradient(180deg,#fff 0%,#f9fbfb 68%,#edf5f3 100%);border-inline-end:1px solid #dce7e5;padding:18px 15px;gap:17px;overflow:hidden}
+.sidebar::before{content:"";position:absolute;z-index:-1;inset:0 0 auto;height:210px;background:radial-gradient(ellipse at 10% 5%,rgba(28,126,112,.13),transparent 66%),linear-gradient(145deg,rgba(235,247,244,.7),transparent 70%);pointer-events:none}
+.sidebar::after{content:"";position:absolute;z-index:-1;inset:auto -55px -60px auto;width:210px;height:210px;border:1px solid rgba(23,107,99,.1);border-radius:50%;box-shadow:0 0 0 18px rgba(23,107,99,.025),0 0 0 38px rgba(23,107,99,.02);pointer-events:none}
+.logo{padding:0 0 14px;border-bottom:1px solid var(--line);display:block}
+.brand-lockup{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-logo-frame{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;overflow:hidden;border-radius:14px;background:#fff;border:1px solid #e3ece9;box-shadow:0 5px 14px rgba(21,76,68,.08);padding:4px}
+.brand-logo-frame img{width:100%;height:100%;object-fit:contain}
+.logo-text{min-width:0}
+.logo-text b{font-size:13.5px;line-height:1.65;display:block;font-weight:800;letter-spacing:0}
+.logo-text span{display:block;color:var(--txt-2);font-size:10px;line-height:1.7;margin-top:2px}
+.sidebar-visual{height:136px;position:relative;overflow:hidden;border-radius:15px;border:1px solid rgba(25,87,78,.12);box-shadow:0 7px 20px rgba(25,87,78,.08);background:#1d3d3b}
+.sidebar-visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.82)}
+.sidebar-visual-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,32,33,.88),rgba(8,32,33,.05) 90%),linear-gradient(90deg,rgba(13,87,76,.2),transparent)}
+.sidebar-visual-copy{position:absolute;inset:auto 12px 10px;color:#fff;display:flex;flex-direction:column;gap:2px}
+.sidebar-visual-copy span{font-size:10px;color:#d7e9e5}
+.sidebar-visual-copy b{font-size:14px;font-weight:800}
+.sidebar-group{position:relative}
+.nav-label{font-size:10px;font-weight:800;color:#7c8d90;letter-spacing:0;margin-bottom:6px;padding-inline-start:9px}
+.nav-list{gap:3px}
+.nav-item{padding:9px 10px;border-radius:10px;gap:10px;font-size:12.5px;font-weight:600;color:#5e7075}
+.nav-icon{width:28px;height:28px;display:grid;place-items:center;flex:0 0 28px;border:1px solid #e3ece9;background:rgba(255,255,255,.82);border-radius:9px;font-size:15px;color:#51756e}
+.nav-item:hover{background:#f0f7f5;color:#205d55}
+.nav-item.active{background:linear-gradient(105deg,#e4f3ef,#f4f9f7);color:#176b63;font-weight:800}
+.nav-item.active::before{background:#176b63;width:3px;height:21px}
+.nav-item.active .nav-icon{background:#176b63;color:#fff;border-color:#176b63}
+.sidebar-cta{margin-top:auto;padding:14px 13px;background:linear-gradient(145deg,#e8f5f1,#f6faf8);border:1px solid #d5e8e2;border-radius:14px;box-shadow:0 5px 15px rgba(26,90,77,.045)}
+.sidebar-cta::before{content:"";position:absolute;top:-32px;inset-inline-end:-24px;width:100px;height:100px;background:radial-gradient(circle,rgba(23,107,99,.12),transparent 70%);pointer-events:none}
+.sidebar-cta .cta-kicker{display:block;color:#438077;font-size:10px;font-weight:700;margin-bottom:3px;position:relative}
+.sidebar-cta b{font-size:13px;margin-bottom:4px;position:relative}
+.sidebar-cta p{font-size:11px;line-height:1.8;margin-bottom:10px;position:relative}
+.sidebar-cta .btn{display:flex;justify-content:center;align-items:center;gap:7px;position:relative;padding:8px 10px;font-size:11.5px;border-radius:9px}
+.btn-primary{background:#176b63!important;color:#fff!important;box-shadow:0 4px 11px rgba(23,107,99,.18)!important}
+.btn-primary:hover{background:#24887c!important}
+.main{padding:24px 30px 50px}
+.topbar{margin-bottom:20px}
+.panel-head{margin-bottom:17px}
+.panel-head h1{font-size:21px;letter-spacing:0}
+.panel-head p{max-width:780px;line-height:1.9}
+.car-grid{gap:13px;grid-template-columns:repeat(auto-fill,minmax(215px,1fr))}
+.car-tile{border-radius:13px}
+.form-card{border-radius:13px}
+footer{border-top:1px solid var(--line);margin-top:24px}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{box-shadow:0 18px 45px rgba(18,48,48,.18)}.main{padding:20px 20px 40px}}
+@media(max-width:600px){.main{padding:15px 12px 34px}.panel-head h1{font-size:19px}.sidebar-visual{height:118px}.brand-logo-frame{width:43px;height:43px;flex-basis:43px}.logo-text b{font-size:12.5px}}
 </style>
 </head>
 <body>
@@ -610,7 +662,7 @@ input,select,textarea{font:inherit;color:inherit}
 <div class="app">
 
   <!-- ===================== SIDEBAR ===================== -->
-  <aside class="sidebar" id="sidebar"><div class="logo"><div class="logo-mark">خ</div><div class="logo-text"><b>خودرو+</b><span>بانک اطلاعات خودرو و خرید</span></div></div><div><div class="nav-label">بررسی و خرید</div><div class="nav-list"><a class="nav-item" href="index.html"><span class="nav-icon">⌂</span> صفحه نخست</a><a class="nav-item " href="pages/buy.html"><span class="nav-icon">⌕</span> خرید خودرو</a><a class="nav-item " href="pages/buy-transfer.html"><span class="nav-icon">⇄</span> بررسی خرید حواله</a></div></div><div><div class="nav-label">اطلاعات</div><div class="nav-list"><a class="nav-item " href="pages/bank.html"><span class="nav-icon">▦</span> بانک خودرو</a><a class="nav-item " href="pages/guide.html"><span class="nav-icon">✓</span> راهنمای بررسی</a><a class="nav-item " href="pages/contact.html"><span class="nav-icon">◌</span> ارتباط و پیگیری</a></div></div><div class="sidebar-cta"><b>پیش از خرید بررسی کن</b><p>مشخصات خودرو، مدارک و شرایط معامله را مرحله‌به‌مرحله بسنج.</p><a class="btn btn-primary" href="pages/guide.html">راهنمای خرید</a></div></aside>
+  <aside class="sidebar" id="sidebar"><div class="logo"><a class="brand-lockup" href="index.html"><span class="brand-logo-frame"><img src="assets/images/logo.png" alt="نشان مرکز خرید خودرو و حواله"></span><span class="logo-text"><b>مرکز خرید خودرو و حواله</b><span>مرجع اطلاعات و بررسی پیش از خرید</span></span></a></div><div class="sidebar-visual"><img src="assets/images/car-02.jpg" alt="خودرو برای بررسی پیش از خرید" loading="lazy"><div class="sidebar-visual-shade"></div><div class="sidebar-visual-copy"><span>راهنمای انتخاب آگاهانه</span><b>اول بررسی، بعد خرید</b></div></div><div class="sidebar-group"><div class="nav-label">مرکز خرید</div><div class="nav-list"><a class="nav-item active" href="index.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>صفحه نخست</span></a><a class="nav-item " href="pages/buy.html"><span class="nav-icon" aria-hidden="true">⌕</span><span>خرید خودرو</span></a><a class="nav-item " href="pages/buy-transfer.html"><span class="nav-icon" aria-hidden="true">⇄</span><span>خرید حواله</span></a></div></div><div class="sidebar-group"><div class="nav-label">بانک و راهنما</div><div class="nav-list"><a class="nav-item " href="pages/bank.html"><span class="nav-icon" aria-hidden="true">▦</span><span>بانک اطلاعات خودرو</span></a><a class="nav-item " href="pages/guide.html"><span class="nav-icon" aria-hidden="true">✓</span><span>راهنمای بررسی</span></a><a class="nav-item " href="pages/contact.html"><span class="nav-icon" aria-hidden="true">◌</span><span>ارتباط و پیگیری</span></a></div></div><div class="sidebar-cta"><span class="cta-kicker">چک‌لیست کوتاه</span><b>پیش از هر پرداخت</b><p>مدارک، وضعیت فنی و شرایط معامله را با دقت بررسی کنید.</p><a class="btn btn-primary" href="pages/guide.html">مشاهده راهنما <span aria-hidden="true">←</span></a></div></aside>
 
   <!-- ===================== MAIN ===================== -->
   <main class="main">
