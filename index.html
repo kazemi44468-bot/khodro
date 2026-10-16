@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<title>خودرو+ | معامله‌گر خودرو و حواله</title>
-<meta name="description" content="معرفی خودروها و سامان‌دهی درخواست‌های خرید، فروش و حواله">
+<title>خودرو+ | بانک اطلاعات خودرو و خرید</title>
+<meta name="description" content="گردآوری اطلاعات خودروها و راهنمای بررسی پیش از خرید">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -610,54 +610,7 @@ input,select,textarea{font:inherit;color:inherit}
 <div class="app">
 
   <!-- ===================== SIDEBAR ===================== -->
-  <aside class="sidebar" id="sidebar">
-    <div class="logo">
-      <div class="logo-mark">خ</div>
-      <div class="logo-text">
-        <b>خودرو+</b>
-        <span>معامله‌گر خودرو و حواله</span>
-      </div>
-    </div>
-
-    <div>
-      <div class="nav-label">معامله</div>
-      <div class="nav-list">
-        <a class="nav-item active" href="pages/buy.html">
-          <span class="nav-icon">⌕</span> خرید خودرو
-        </a>
-        <a class="nav-item" href="pages/sell.html">
-          <span class="nav-icon">↗</span> فروش خودرو
-        </a>
-        <a class="nav-item" href="pages/buy-transfer.html">
-          <span class="nav-icon">⇄</span> خرید حواله
-        </a>
-        <a class="nav-item" href="pages/sell-transfer.html">
-          <span class="nav-icon">⇄</span> فروش حواله
-        </a>
-      </div>
-    </div>
-
-    <div>
-      <div class="nav-label">دسترسی</div>
-      <div class="nav-list">
-        <a class="nav-item" href="pages/bank.html">
-          <span class="nav-icon">▦</span> بانک خودرو
-        </a>
-        <a class="nav-item" href="pages/guide.html">
-          <span class="nav-icon">✓</span> راهنمای معامله
-        </a>
-        <a class="nav-item" href="pages/contact.html">
-          <span class="nav-icon">◌</span> تماس و مشاوره
-        </a>
-      </div>
-    </div>
-
-    <div class="sidebar-cta">
-      <b>ثبت سریع آگهی</b>
-      <p>برای ثبت اطلاعات اولیه به صفحه اختصاصی مراجعه کن.</p>
-      <a class="btn btn-primary" href="pages/sell.html">شروع ثبت</a>
-    </div>
-  </aside>
+  <aside class="sidebar" id="sidebar"><div class="logo"><div class="logo-mark">خ</div><div class="logo-text"><b>خودرو+</b><span>بانک اطلاعات خودرو و خرید</span></div></div><div><div class="nav-label">بررسی و خرید</div><div class="nav-list"><a class="nav-item" href="index.html"><span class="nav-icon">⌂</span> صفحه نخست</a><a class="nav-item " href="pages/buy.html"><span class="nav-icon">⌕</span> خرید خودرو</a><a class="nav-item " href="pages/buy-transfer.html"><span class="nav-icon">⇄</span> بررسی خرید حواله</a></div></div><div><div class="nav-label">اطلاعات</div><div class="nav-list"><a class="nav-item " href="pages/bank.html"><span class="nav-icon">▦</span> بانک خودرو</a><a class="nav-item " href="pages/guide.html"><span class="nav-icon">✓</span> راهنمای بررسی</a><a class="nav-item " href="pages/contact.html"><span class="nav-icon">◌</span> ارتباط و پیگیری</a></div></div><div class="sidebar-cta"><b>پیش از خرید بررسی کن</b><p>مشخصات خودرو، مدارک و شرایط معامله را مرحله‌به‌مرحله بسنج.</p><a class="btn btn-primary" href="pages/guide.html">راهنمای خرید</a></div></aside>
 
   <!-- ===================== MAIN ===================== -->
   <main class="main">
@@ -670,8 +623,8 @@ input,select,textarea{font:inherit;color:inherit}
         <div class="search-hint" id="searchHint">
           <button data-search="دنا"><span>دنا پلاس توربو</span><small>خرید خودرو</small></button>
           <button data-search="تارا"><span>تارا اتوماتیک</span><small>خرید خودرو</small></button>
-          <button data-search="حواله"><span>حواله‌های فعال امروز</span><small>خرید حواله</small></button>
-          <button data-search="خارجی"><span>خودروهای خارجی</span><small>بانک خودرو</small></button>
+          <button data-search="حواله"><span>بررسی خرید حواله</span><small>خرید حواله</small></button>
+          <button data-search="خارجی"><span>مدل‌های خودرو</span><small>بانک خودرو</small></button>
         </div>
       </div>
 
@@ -685,14 +638,8 @@ input,select,textarea{font:inherit;color:inherit}
       <button class="tab active" data-tab="buy" role="tab">
         <span>⌕</span><span class="tab-label">خرید خودرو</span>
       </button>
-      <button class="tab" data-tab="sell" role="tab">
-        <span>↗</span><span class="tab-label">فروش خودرو</span>
-      </button>
       <button class="tab" data-tab="buyTransfer" role="tab">
         <span>⇄</span><span class="tab-label">خرید حواله</span>
-      </button>
-      <button class="tab" data-tab="sellTransfer" role="tab">
-        <span>⇄</span><span class="tab-label">فروش حواله</span>
       </button>
     </div>
 
@@ -727,13 +674,13 @@ input,select,textarea{font:inherit;color:inherit}
           <div class="car-tile-info">
             <h3>تارا اتوماتیک</h3>
             <div class="car-tile-meta"><span>دستی / اتوماتیک</span><span>ایران‌خودرو</span></div>
-            <div class="car-tile-price"><b>تماس بگیرید</b><small>جزئیات ←</small></div>
+            <div class="car-tile-price"><b>مشاهده مشخصات</b><small>جزئیات ←</small></div>
           </div>
         </article>
 
         <article class="car-tile" data-name="شاهین" data-href="pages/shahin.html">
           <div class="car-tile-img">
-            <span class="tile-badge foreign">خارجی</span>
+            <span class="tile-badge domestic">داخلی</span>
             <img loading="lazy" src="assets/images/car-05.jpg" alt="خودروی شاهین">
           </div>
           <div class="car-tile-info">
@@ -757,49 +704,6 @@ input,select,textarea{font:inherit;color:inherit}
       </div>
     </section>
 
-    <!-- ====== PANEL: SELL CAR ====== -->
-    <section class="panel" data-panel="sell">
-      <div class="panel-head">
-        <div>
-          <h1>فروش خودرو <span class="badge-sell">ثبت آگهی</span></h1>
-          <p>مشخصات خودرو را وارد کن تا برای معرفی آماده شود.</p>
-        </div>
-      </div>
-
-      <form class="form-card" onsubmit="event.preventDefault();alert('این فرم در حال حاضر به سامانه ثبت اطلاعات متصل نیست؛ اطلاعات ذخیره یا ارسال نمی‌شود.')">
-        <div class="form-grid">
-          <div class="field">
-            <label>برند و مدل <span>*</span></label>
-            <input type="text" placeholder="مثلاً دنا پلاس توربو" required>
-          </div>
-          <div class="field">
-            <label>سال ساخت <span>*</span></label>
-            <select required>
-              <option value="">انتخاب کنید</option>
-              <option>۱۴۰۳</option><option>۱۴۰۲</option><option>۱۴۰۱</option>
-              <option>۱۴۰۰</option><option>۱۳۹۹</option><option>قبل از ۱۳۹۹</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>کارکرد (کیلومتر)</label>
-            <input type="number" placeholder="مثلاً ۴۵۰۰۰">
-          </div>
-          <div class="field">
-            <label>قیمت پیشنهادی (تومان)</label>
-            <input type="text" placeholder="مبلغ پیشنهادی به تومان">
-          </div>
-          <div class="field full">
-            <label>توضیحات تکمیلی</label>
-            <textarea placeholder="وضعیت بدنه، رنگ، بیمه، مدارک و..."></textarea>
-          </div>
-        </div>
-        <div class="form-actions">
-          <button type="button" class="btn btn-ghost">انصراف</button>
-          <button type="submit" class="btn btn-primary">ثبت درخواست فروش</button>
-        </div>
-      </form>
-    </section>
-
     <!-- ====== PANEL: BUY TRANSFER ====== -->
     <section class="panel" data-panel="buyTransfer">
       <div class="panel-head">
@@ -818,52 +722,7 @@ input,select,textarea{font:inherit;color:inherit}
         </div>
       </div>    </section>
 
-    <!-- ====== PANEL: SELL TRANSFER ====== -->
-    <section class="panel" data-panel="sellTransfer">
-      <div class="panel-head">
-        <div>
-          <h1>فروش حواله <span class="badge-transfer">ثبت حواله</span></h1>
-          <p>مشخصات حواله را وارد کن تا برای بررسی شرایط آماده شود.</p>
-        </div>
-      </div>
-
-      <form class="form-card" onsubmit="event.preventDefault();alert('در نسخه فعلی، فرم به سامانه ثبت اطلاعات متصل نیست و اطلاعات ذخیره نمی‌شود.')">
-        <div class="form-grid">
-          <div class="field">
-            <label>نوع خودرو <span>*</span></label>
-            <input type="text" placeholder="مثلاً تارا اتوماتیک" required>
-          </div>
-          <div class="field">
-            <label>نوع حواله <span>*</span></label>
-            <select required>
-              <option value="">انتخاب کنید</option>
-              <option>طبق قرارداد / بخشنامه</option>
-              <option>پیش‌فروش</option>
-              <option>فروش فوری</option>
-              <option>سایر شرایط</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>مبلغ درخواستی (تومان) <span>*</span></label>
-            <input type="text" placeholder="مثلاً ۹۰۰,۰۰۰,۰۰۰" required>
-          </div>
-          <div class="field">
-            <label>شماره تماس</label>
-            <input type="tel" placeholder="۰۹۱۲...">
-          </div>
-          <div class="field full">
-            <label>توضیحات</label>
-            <textarea placeholder="شرایط خاص، مدارک، نحوه تحویل و..."></textarea>
-          </div>
-        </div>
-        <div class="form-actions">
-          <button type="button" class="btn btn-ghost">انصراف</button>
-          <button type="submit" class="btn btn-primary">ثبت حواله</button>
-        </div>
-      </form>
-    </section>
-
-  </main>
+</main>
 </div>
 
 <div class="overlay" id="overlay"></div>
