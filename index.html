@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مرکز خرید خودرو و حواله</title>
     
-    <!-- فونت وزیرمتن -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <!-- فونت محلی مخزن -->
+    <style>
+      @font-face{font-family:Vazirmatn;src:url('assets/fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+      @font-face{font-family:Vazirmatn;src:url('assets/fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+      @font-face{font-family:Vazirmatn;src:url('assets/fonts/Vazirmatn-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+      @font-face{font-family:Vazirmatn;src:url('assets/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700 900;font-display:swap}
+    </style>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,26 +49,26 @@
                 <!-- آیکون ماشین به جای لوگو -->
                 <i data-lucide="car" class="w-12 h-12 text-white"></i>
             </div>
-            <h1 class="text-xl font-bold">مرکز خرید</h1>
-            <h2 class="text-lg font-bold">خودرو و حواله</h2>
-            <p class="text-xs text-white/70 mt-2">معتبر • سریع • مطمئن</p>
+            <div class="text-xl font-bold">مرکز خرید</div>
+            <div class="text-lg font-bold">خودرو و حواله</div>
+            <p class="text-xs text-white/70 mt-2">اطلاعات، بررسی و ثبت درخواست</p>
         </div>
 
         <!-- منو -->
         <nav class="flex-1 px-4 py-6 space-y-2 relative z-10">
-            <a href="#" class="flex items-center gap-3 bg-[#1a6b6b] text-white px-4 py-3 rounded-xl transition-all">
+            <a href="index.html" class="flex items-center gap-3 bg-[#1a6b6b] text-white px-4 py-3 rounded-xl transition-all">
                 <i data-lucide="home" class="w-5 h-5"></i>
                 <span class="font-medium">نخست</span>
             </a>
-            <a href="#" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
+            <a href="pages/register-request.html" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
                 <i data-lucide="tag" class="w-5 h-5"></i>
                 <span class="font-medium">فروش</span>
             </a>
-            <a href="#" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
+            <a href="pages/bank.html" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
                 <i data-lucide="landmark" class="w-5 h-5"></i>
                 <span class="font-medium">بانک خودرو</span>
             </a>
-            <a href="#" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
+            <a href="pages/contact.html" class="flex items-center gap-3 text-white/80 hover:bg-white/10 px-4 py-3 rounded-xl transition-all">
                 <i data-lucide="phone" class="w-5 h-5"></i>
                 <span class="font-medium">تماس</span>
             </a>
@@ -114,9 +119,9 @@
             
             <!-- متن‌های روی هیرو -->
             <div class="absolute inset-0 flex flex-col justify-center px-12 text-white">
-                <h1 class="text-4xl font-bold mb-3">مرکز خرید خودرو و حواله</h1>
-                <p class="text-xl mb-2 font-medium">مقصد مطمئن فروش خودروی شما</p>
-                <p class="text-sm text-white/80">خودرو و حواله، با شرایط مناسب، در کوتاه‌ترین زمان</p>
+                <h1 class="text-2xl md:text-3xl font-bold mb-3">مرکز خرید خودرو و حواله</h1>
+                <p class="text-lg md:text-xl mb-2 font-medium">اطلاعات روشن‌تر برای تصمیم بهتر</p>
+                <p class="text-sm text-white/80">مدل‌های خودرو، بررسی حواله و راهنمای مدارک را در یک مسیر دنبال کنید.</p>
             </div>
         </div>
 
@@ -130,29 +135,29 @@
                         <i data-lucide="clipboard-list" class="w-6 h-6 text-[#0d4a4a]"></i>
                         <h2 class="text-xl font-bold text-gray-800">ثبت درخواست فروش خودرو / حواله</h2>
                     </div>
-                    <p class="text-sm text-gray-500 mb-6">اطلاعات خود را وارد کنید تا کارشناسان ما در سریع‌ترین زمان با شما تماس بگیرند.</p>
+                    <p class="text-sm text-gray-500 mb-6">مشخصات اولیه را وارد کنید. این نسخه ایستا اطلاعات را فقط در همین مرورگر نگه می‌دارد و درخواست را به سرور ارسال نمی‌کند.</p>
 
                     <!-- تب‌ها -->
                     <div class="flex bg-gray-100 p-1 rounded-xl mb-6">
-                        <button class="flex-1 flex items-center justify-center gap-2 py-3 bg-[#0d4a4a] text-white rounded-lg shadow-sm font-medium transition-all">
+                        <button type="button" data-kind="vehicle" class="request-tab flex-1 flex items-center justify-center gap-2 py-3 bg-[#0d4a4a] text-white rounded-lg shadow-sm font-medium transition-all">
                             <i data-lucide="car" class="w-5 h-5"></i>
                             فروش خودرو
                         </button>
-                        <button class="flex-1 flex items-center justify-center gap-2 py-3 text-gray-500 hover:text-gray-700 font-medium transition-all">
+                        <button type="button" data-kind="transfer" class="request-tab flex-1 flex items-center justify-center gap-2 py-3 text-gray-500 hover:text-gray-700 font-medium transition-all">
                             <i data-lucide="file-text" class="w-5 h-5"></i>
                             فروش حواله
                         </button>
                     </div>
 
                     <!-- فیلدهای فرم -->
-                    <form class="space-y-4">
+                    <form id="requestForm" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <!-- نام -->
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">نام و نام خانوادگی</label>
                                 <div class="relative">
                                     <i data-lucide="user" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <input type="text" placeholder="نام و نام خانوادگی خود را وارد کنید" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all">
+                                    <input name="name" type="text" required placeholder="نام و نام خانوادگی خود را وارد کنید" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all">
                                 </div>
                             </div>
                             <!-- تلفن -->
@@ -160,7 +165,7 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1">شماره تماس</label>
                                 <div class="relative">
                                     <i data-lucide="phone" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <input type="tel" placeholder="۰۹xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all text-left" dir="ltr">
+                                    <input name="phone" type="tel" required placeholder="۰۹xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all text-left" dir="ltr">
                                 </div>
                             </div>
                         </div>
@@ -171,11 +176,13 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1">نوع خودرو</label>
                                 <div class="relative">
                                     <i data-lucide="car" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
+                                    <select name="bodyType" id="bodyType" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
                                         <option value="">انتخاب کنید</option>
-                                        <option value="sedan">سدان</option>
-                                        <option value="suv">شاسی بلند</option>
-                                        <option value="hatchback">هاچبک</option>
+                                        <option value="سدان">سدان</option>
+                                        <option value="شاسی‌بلند">شاسی‌بلند</option>
+                                        <option value="هاچ‌بک">هاچ‌بک</option>
+                                        <option value="وانت">وانت</option>
+                                        <option value="حواله">حواله</option>
                                     </select>
                                 </div>
                             </div>
@@ -184,10 +191,9 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1">مدل</label>
                                 <div class="relative">
                                     <i data-lucide="layers" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
+                                    <select name="model" id="model" required class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
                                         <option value="">انتخاب مدل</option>
-                                        <option value="1">مدل ۱</option>
-                                        <option value="2">مدل ۲</option>
+                                        <option>دنا پلاس</option><option>تارا</option><option>شاهین</option><option>کوییک</option><option>پژو ۲۰۷</option><option>سایپا ۱۵۱</option><option>سایر خودروها</option>
                                     </select>
                                 </div>
                             </div>
@@ -199,8 +205,8 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1">سال ساخت</label>
                                 <div class="relative">
                                     <i data-lucide="calendar" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
-                                        <option value="">انتخاب سال</option>
+                                    <select name="year" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
+                                        <option value="">انتخاب سال / موعد تحویل</option>
                                         <option value="1402">۱۴۰۲</option>
                                         <option value="1401">۱۴۰۱</option>
                                         <option value="1400">۱۴۰۰</option>
@@ -212,10 +218,13 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-1">وضعیت خودرو</label>
                                 <div class="relative">
                                     <i data-lucide="activity" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4"></i>
-                                    <select class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
+                                    <select name="status" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all appearance-none">
                                         <option value="">انتخاب وضعیت</option>
-                                        <option value="healthy">سالم</option>
-                                        <option value="damaged">تصادفی</option>
+                                        <option value="سالم">سالم</option>
+                                        <option value="کارکرده">کارکرده</option>
+                                        <option value="تصادفی">تصادفی</option>
+                                        <option value="در انتظار تحویل">حواله؛ در انتظار تحویل</option>
+                                        <option value="تحویل‌شده">حواله؛ خودرو تحویل شده</option>
                                     </select>
                                 </div>
                             </div>
@@ -226,7 +235,7 @@
                             <label class="block text-sm font-medium text-gray-700 mb-1">توضیحات تکمیلی (اختیاری)</label>
                             <div class="relative">
                                 <i data-lucide="message-square" class="absolute right-3 top-4 text-gray-400 w-4 h-4"></i>
-                                <textarea rows="3" placeholder="در صورت نیاز توضیحات بیشتری وارد کنید..." class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all resize-none"></textarea>
+                                <textarea name="details" rows="3" placeholder="سال، تیپ، مبلغ پیشنهادی، مانده پرداخت یا موعد تحویل..." class="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 pr-10 pl-3 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:border-transparent outline-none transition-all resize-none"></textarea>
                             </div>
                         </div>
 
@@ -235,6 +244,7 @@
                             <i data-lucide="send" class="w-5 h-5"></i>
                             ثبت درخواست
                         </button>
+                        <p id="formMessage" class="hidden text-sm rounded-lg p-3" role="status" aria-live="polite"></p>
                     </form>
                 </div>
 
@@ -251,7 +261,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-bold text-gray-800 mb-1">فرآیند ساده و سریع</h3>
-                                    <p class="text-sm text-gray-500">ثبت درخواست در چند دقیقه</p>
+                                    <p class="text-sm text-gray-500">فرم کوتاه برای ثبت اطلاعات اولیه</p>
                                 </div>
                             </div>
 
@@ -262,7 +272,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-bold text-gray-800 mb-1">پشتیبانی تخصصی</h3>
-                                    <p class="text-sm text-gray-500">مشاوره و راهنمایی کارشناسان</p>
+                                    <p class="text-sm text-gray-500">دسترسی به راهنما و اطلاعات مدل‌ها</p>
                                 </div>
                             </div>
 
@@ -273,7 +283,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-bold text-gray-800 mb-1">بازار معتبر و گسترده</h3>
-                                    <p class="text-sm text-gray-500">دسترسی به خریداران واقعی</p>
+                                    <p class="text-sm text-gray-500">مرور اطلاعات پیش از توافق</p>
                                 </div>
                             </div>
 
@@ -284,7 +294,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-bold text-gray-800 mb-1">امنیت اطلاعات</h3>
-                                    <p class="text-sm text-gray-500">حفظ حریم خصوصی و اطلاعات شما</p>
+                                    <p class="text-sm text-gray-500">اطلاعات فرم فقط در مرورگر فعلی ذخیره می‌شود</p>
                                 </div>
                             </div>
                         </div>
@@ -302,6 +312,40 @@
 
             </div>
         </div>
+
+        <!-- ================= محتوای اطلاعاتی سایت ================= -->
+        <section class="max-w-6xl mx-auto w-full px-6 md:px-8 pb-8 space-y-6">
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 md:p-6">
+                <div class="flex items-center justify-between gap-3 flex-wrap mb-4">
+                    <div><span class="text-xs font-bold text-teal-700">بانک اطلاعات</span><h2 class="text-xl font-bold mt-1">مدل‌های منتخب خودرو</h2><p class="text-sm text-gray-500 mt-1">برای دیدن اطلاعات هر مدل، صفحه اختصاصی آن را باز کنید.</p></div>
+                    <a href="pages/bank.html" class="text-sm font-bold text-teal-800">مشاهده بانک خودرو ←</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                    <a href="pages/dena-plus.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">دنا پلاس</span><span class="text-xs text-gray-500">ایران‌خودرو</span></a>
+                    <a href="pages/tara.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">تارا</span><span class="text-xs text-gray-500">ایران‌خودرو</span></a>
+                    <a href="pages/shahin.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">شاهین</span><span class="text-xs text-gray-500">سایپا</span></a>
+                    <a href="pages/quick.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">کوییک</span><span class="text-xs text-gray-500">سایپا</span></a>
+                    <a href="pages/peugeot-207.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">پژو ۲۰۷</span><span class="text-xs text-gray-500">ایران‌خودرو</span></a>
+                    <a href="pages/saipa-151.html" class="rounded-xl border border-gray-100 bg-gray-50 p-3 text-center hover:border-teal-700"><span class="block text-sm font-bold">سایپا ۱۵۱</span><span class="text-xs text-gray-500">وانت سبک</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <article class="rounded-2xl bg-white border border-gray-100 shadow-sm p-5">
+                    <div class="flex items-center gap-3 mb-3"><span class="bg-teal-50 text-teal-800 rounded-xl p-2"><i data-lucide="file-check" class="w-5 h-5"></i></span><h2 class="font-bold text-lg">راهنمای بررسی خودرو</h2></div>
+                    <p class="text-sm text-gray-600 leading-7 mb-3">مدارک مالکیت، شماره شاسی و موتور، وضعیت بدنه و فنی، کارکرد، سوابق تعمیر و شرایط پرداخت را پیش از توافق بررسی کنید.</p>
+                    <a href="pages/guide.html" class="text-sm font-bold text-teal-800">مشاهده چک‌لیست بررسی ←</a>
+                </article>
+                <article class="rounded-2xl bg-white border border-gray-100 shadow-sm p-5">
+                    <div class="flex items-center gap-3 mb-3"><span class="bg-amber-50 text-amber-700 rounded-xl p-2"><i data-lucide="file-text" class="w-5 h-5"></i></span><h2 class="font-bold text-lg">راهنمای بررسی حواله</h2></div>
+                    <p class="text-sm text-gray-600 leading-7 mb-3">نام طرح، تیپ خودرو، قرارداد و رسیدهای پرداخت، مانده تعهدات، موعد تحویل و شرایط مجاز انتقال را کنار هم بررسی کنید.</p>
+                    <a href="pages/buy-transfer.html" class="text-sm font-bold text-teal-800">بررسی اطلاعات حواله ←</a>
+                </article>
+            </div>
+            <div class="rounded-2xl bg-teal-50 border border-teal-100 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div><h2 class="font-bold text-lg text-teal-950">برای راهنمایی بیشتر</h2><p class="text-sm text-teal-900/80 mt-1">از صفحه ارتباط و پیگیری برای مشاهده راه‌های تماس استفاده کنید.</p></div>
+                <a href="pages/contact.html" class="inline-flex items-center justify-center rounded-xl bg-[#0d4a4a] text-white px-5 py-3 text-sm font-bold">ارتباط و پیگیری</a>
+            </div>
+        </section>
 
         <!-- ================= فوتر ================= -->
         <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
@@ -345,6 +389,46 @@
     <!-- اسکریپت راه‌اندازی آیکون‌ها -->
     <script>
         lucide.createIcons();
+        const requestForm = document.getElementById('requestForm');
+        const formMessage = document.getElementById('formMessage');
+        let requestKind = 'vehicle';
+        document.querySelectorAll('.request-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                requestKind = tab.dataset.kind;
+                document.querySelectorAll('.request-tab').forEach(item => {
+                    item.classList.toggle('bg-[#0d4a4a]', item === tab);
+                    item.classList.toggle('text-white', item === tab);
+                    item.classList.toggle('shadow-sm', item === tab);
+                    item.classList.toggle('text-gray-500', item !== tab);
+                });
+                document.getElementById('bodyType').value = requestKind === 'transfer' ? 'حواله' : '';
+                document.getElementById('model').innerHTML = requestKind === 'transfer'
+                  ? '<option value="">انتخاب خودرو / طرح حواله</option><option>دنا پلاس</option><option>تارا</option><option>شاهین</option><option>کوییک</option><option>پژو ۲۰۷</option><option>سایر طرح‌ها</option>'
+                  : '<option value="">انتخاب مدل</option><option>دنا پلاس</option><option>تارا</option><option>شاهین</option><option>کوییک</option><option>پژو ۲۰۷</option><option>سایپا ۱۵۱</option><option>سایر خودروها</option>';
+                document.querySelector('label[for="request-kind"]')?.remove();
+            });
+        });
+        requestForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const data = Object.fromEntries(new FormData(requestForm).entries());
+            if (!/^0?9[0-9۰-۹]{9}$/.test(data.phone.replace(/[\\s-]/g,''))) {
+                formMessage.className = 'text-sm rounded-lg p-3 bg-amber-50 text-amber-800';
+                formMessage.textContent = 'شماره تماس را بررسی کنید و با قالب معتبر وارد کنید.';
+                return;
+            }
+            const record = {id:'KH-' + Date.now().toString().slice(-8), kind:requestKind, ...data, createdAt:new Date().toISOString()};
+            try {
+                const records = JSON.parse(localStorage.getItem('khodroRequests') || '[]');
+                records.push(record);
+                localStorage.setItem('khodroRequests', JSON.stringify(records));
+                formMessage.className = 'text-sm rounded-lg p-3 bg-teal-50 text-teal-900';
+                formMessage.textContent = 'اطلاعات در همین مرورگر ذخیره شد. این ثبت به سرور ارسال نشده و برای مرکز قابل مشاهده نیست. کد پیگیری محلی: ' + record.id;
+                requestForm.reset();
+            } catch (error) {
+                formMessage.className = 'text-sm rounded-lg p-3 bg-rose-50 text-rose-800';
+                formMessage.textContent = 'ذخیره‌سازی مرورگر در دسترس نیست. لطفاً بعداً دوباره تلاش کنید.';
+            }
+        });
     </script>
 </body>
 </html>
