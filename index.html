@@ -52,6 +52,26 @@ img{max-width:100%;display:block}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 input,select,textarea{font:inherit;color:inherit}
 
+
+/* Homepage content additions */
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.home-info{margin-top:26px}
+.home-section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:14px;flex-wrap:wrap}
+.home-section-head h2,.home-contact h2{font-size:20px;line-height:1.6;margin:5px 0;font-weight:900}
+.home-section-head p,.home-contact p{font-size:13px;color:var(--txt-2)}
+.home-more{font-size:12px;font-weight:800;color:var(--acc);white-space:nowrap}
+.home-info-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.home-info-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow-sm)}
+.home-info-number{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--acc-soft);color:var(--acc);font-size:12px;font-weight:900;margin-bottom:10px}
+.home-info-card h3{font-size:14px;margin-bottom:6px}
+.home-info-card p{font-size:12px;line-height:1.9;color:var(--txt-2)}
+.home-check-list{padding-inline-start:20px;color:var(--txt-2);font-size:13px;line-height:2.1}
+.home-contact{margin-top:22px;background:linear-gradient(120deg,#fff,#eef2ff);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.home-contact-actions{display:flex;gap:8px;flex-wrap:wrap}
+.home-footer{padding:22px 4px 4px;text-align:center;color:var(--txt-2);font-size:12px}
+@media(max-width:1100px){.home-info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.home-info-grid{grid-template-columns:1fr 1fr;gap:8px}.home-info-card{padding:12px}.home-section-head h2,.home-contact h2{font-size:17px}.home-contact{padding:15px}.home-contact-actions{width:100%}.home-contact-actions .btn{flex:1;justify-content:center}}
+
 /* ============ APP LAYOUT ============ */
 .app{
   display:grid;
@@ -662,7 +682,7 @@ footer{border-top:1px solid var(--line);margin-top:24px}
 <div class="app">
 
   <!-- ===================== SIDEBAR ===================== -->
-  <aside class="sidebar" id="sidebar"><div class="logo"><a class="brand-lockup" href="index.html"><span class="brand-logo-frame"><img src="assets/images/logo.png" alt="نشان مرکز خرید خودرو و حواله"></span><span class="logo-text"><b>مرکز خرید خودرو و حواله</b><span>مرجع اطلاعات و بررسی پیش از خرید</span></span></a></div><div class="sidebar-visual"><img src="assets/images/car-illustration.svg" alt="تصویر نمادین خودرو برای معرفی فروش" loading="lazy"><div class="sidebar-visual-shade"></div><div class="sidebar-visual-copy"><span>ویژه فروشندگان</span><b>معرفی خودرو یا حواله</b></div></div><div class="sidebar-group"><div class="nav-label">مرکز خرید</div><div class="nav-list"><a class="nav-item active" href="index.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>صفحه نخست</span></a><a class="nav-item " href="pages/buy.html"><span class="nav-icon" aria-hidden="true">⌕</span><span>اطلاعات خودرو</span></a><a class="nav-item " href="pages/buy-transfer.html"><span class="nav-icon" aria-hidden="true">⇄</span><span>بررسی حواله</span></a></div></div><div class="sidebar-group"><div class="nav-label">بانک و راهنما</div><div class="nav-list"><a class="nav-item " href="pages/bank.html"><span class="nav-icon" aria-hidden="true">▦</span><span>بانک اطلاعات خودرو</span></a><a class="nav-item " href="pages/guide.html"><span class="nav-icon" aria-hidden="true">✓</span><span>راهنمای بررسی</span></a><a class="nav-item " href="pages/contact.html"><span class="nav-icon" aria-hidden="true">◌</span><span>ارتباط و پیگیری</span></a><a class="nav-item" href="pages/register-request.html"><span class="nav-icon" aria-hidden="true">＋</span><span>ثبت درخواست فروش</span></a></div></div><div class="sidebar-cta"><span class="cta-kicker">برای فروشندگان</span><b>خودرو یا حواله دارید؟</b><p>مشخصات اولیه را کوتاه ثبت کنید تا برای بررسی با شما هماهنگ شود.</p><a class="btn btn-primary" href="pages/register-request.html">ثبت درخواست فروش <span aria-hidden="true">←</span></a></div></aside>
+  <aside class="sidebar" id="sidebar"><div class="logo"><a class="brand-lockup" href="index.html"><span class="brand-logo-frame"><img src="assets/images/logo.png" alt="نشان مرکز خرید خودرو و حواله"></span><span class="logo-text"><b>مرکز خرید خودرو و حواله</b><span>مرجع اطلاعات و بررسی پیش از خرید</span></span></a></div><div class="sidebar-visual"><img src="assets/images/car-illustration.svg" alt="تصویر نمادین خودرو برای معرفی فروش" loading="lazy"><div class="sidebar-visual-shade"></div><div class="sidebar-visual-copy"><span>ویژه فروشندگان</span><b>معرفی خودرو یا حواله</b></div></div><div class="sidebar-group"><div class="nav-label">مرکز خرید</div><div class="nav-list"><a class="nav-item active" href="index.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>صفحه نخست</span></a><a class="nav-item " href="pages/buy.html"><span class="nav-icon" aria-hidden="true">⌕</span><span>اطلاعات خودرو</span></a><a class="nav-item " href="pages/buy-transfer.html"><span class="nav-icon" aria-hidden="true">⇄</span><span>بررسی حواله</span></a></div></div><div class="sidebar-group"><div class="nav-label">بانک و راهنما</div><div class="nav-list"><a class="nav-item " href="pages/bank.html"><span class="nav-icon" aria-hidden="true">▦</span><span>بانک اطلاعات خودرو</span></a><a class="nav-item " href="pages/guide.html"><span class="nav-icon" aria-hidden="true">✓</span><span>راهنمای بررسی</span></a><a class="nav-item " href="pages/contact.html"><span class="nav-icon" aria-hidden="true">◌</span><span>ارتباط و پیگیری</span></a></div></div><div class="sidebar-cta"><span class="cta-kicker">پیش از تصمیم</span><b>بررسی را از اطلاعات پایه شروع کنید</b><p>مشخصات مدل، مدارک و شرایط معامله را در یک مسیر مرور کنید.</p><a class="btn btn-primary" href="pages/guide.html">مشاهده راهنمای بررسی <span aria-hidden="true">←</span></a></div></aside>
 
   <!-- ===================== MAIN ===================== -->
   <main class="main">
@@ -680,10 +700,10 @@ footer{border-top:1px solid var(--line);margin-top:24px}
         </div>
       </div>
 
-      <div class="topbar-actions"><a class="btn btn-primary" href="pages/register-request.html" style="padding:10px 15px;font-size:12px;border-radius:10px">ثبت درخواست فروش ←</a></div>
+      <div class="topbar-actions"><a class="btn btn-primary" href="pages/bank.html" style="padding:10px 15px;font-size:12px;border-radius:10px">بانک خودرو ←</a></div>
     </div>
 
-    <section class="seller-hero"><div class="seller-copy"><span class="seller-eyebrow">مرکز خرید خودرو و حواله</span><h2>خودرو یا حواله‌تان را برای فروش معرفی کنید</h2><p>فرم کوتاه را تکمیل کنید؛ درخواست شما برای بررسی اولیه دریافت می‌شود و در صورت نیاز برای هماهنگی تماس می‌گیریم.</p><a class="btn btn-primary seller-action" href="pages/register-request.html">ثبت درخواست فروش <span aria-hidden="true">←</span></a></div><div class="seller-art" aria-hidden="true"></div></section>
+    <section class="seller-hero"><div class="seller-copy"><span class="seller-eyebrow">مرکز خرید خودرو و حواله</span><h2>اطلاعات دقیق‌تر، انتخاب آگاهانه‌تر</h2><p>مدل‌های خودرو و شرایط حواله را بررسی کنید، مشخصات و مدارک مهم را بشناسید و پیش از تصمیم‌گیری، نکات اصلی معامله را مرور کنید.</p><div class="hero-actions"><a class="btn btn-primary seller-action" href="pages/bank.html">ورود به بانک خودرو <span aria-hidden="true">←</span></a><a class="btn btn-ghost" href="#checklist">راهنمای بررسی</a></div></div><div class="seller-art" aria-hidden="true"></div></section>
 
     <div class="tabs" role="tablist">
       <button class="tab active" data-tab="buy" role="tab">
@@ -775,12 +795,30 @@ footer{border-top:1px solid var(--line);margin-top:24px}
       </div>
 
       <div class="form-card">
-        <p>برای بررسی اولیه، مدل و تیپ حواله، مبلغ پیشنهادی، مانده پرداخت و موعد تحویل را در فرم درخواست وارد کنید.</p>
+        <h2 style="font-size:16px;margin-bottom:8px">مواردی که باید بررسی شوند</h2>
+        <ul class="home-check-list"><li>نام دقیق خودرو، تیپ و طرح ثبت‌نام</li><li>مبلغ پرداخت‌شده و مانده تعهدات</li><li>موعد تحویل و شرایط انصراف یا انتقال</li><li>مدارک قرارداد و بخشنامه مرتبط</li></ul>
         <div class="form-actions">
-          <a class="btn btn-primary" href="pages/register-request.html?type=transfer">ثبت درخواست فروش حواله</a>
-          <a class="btn btn-ghost" href="pages/guide.html">چک‌لیست آماده‌سازی حواله</a>
+          <a class="btn btn-primary" href="pages/buy-transfer.html">جزئیات بررسی حواله</a>
+          <a class="btn btn-ghost" href="pages/guide.html">راهنمای بررسی</a>
         </div>
-      </div>    </section>
+      </div>
+    </section>
+
+    <section class="home-info" id="checklist">
+      <div class="home-section-head"><div><span class="seller-eyebrow">راهنمای کاربردی</span><h2>پیش از تصمیم‌گیری چه چیزهایی را بررسی کنیم؟</h2><p>چند محور اصلی برای مرتب‌کردن اطلاعات خودرو و حواله.</p></div><a href="pages/guide.html" class="home-more">راهنمای کامل ←</a></div>
+      <div class="home-info-grid">
+        <article class="home-info-card"><span class="home-info-number">۰۱</span><h3>هویت و مالکیت</h3><p>مدارک مالکیت یا قرارداد را بررسی کنید و از امکان قانونی انتقال و تحویل مطمئن شوید.</p></article>
+        <article class="home-info-card"><span class="home-info-number">۰۲</span><h3>وضعیت خودرو</h3><p>سال ساخت، کارکرد، وضعیت بدنه و فنی، سابقه تعمیر و ایرادهای شناخته‌شده را بسنجید.</p></article>
+        <article class="home-info-card"><span class="home-info-number">۰۳</span><h3>مدارک و تعهدات</h3><p>برای حواله، قرارداد، بخشنامه، رسید پرداخت، مانده تعهدات و موعد تحویل را کنار هم بگذارید.</p></article>
+        <article class="home-info-card"><span class="home-info-number">۰۴</span><h3>شرایط معامله</h3><p>مبلغ، زمان تحویل، شیوه پرداخت و محدودیت‌های انتقال را پیش از توافق نهایی روشن کنید.</p></article>
+      </div>
+    </section>
+
+    <section class="home-contact">
+      <div><span class="seller-eyebrow">مسیرهای اطلاعاتی</span><h2>از کجا ادامه دهید؟</h2><p>برای شناخت مدل‌ها، بررسی حواله یا مرور چک‌لیست‌ها از بخش مناسب استفاده کنید.</p></div>
+      <div class="home-contact-actions"><a href="pages/bank.html" class="btn btn-primary">بانک اطلاعات خودرو</a><a href="pages/buy.html" class="btn btn-ghost">مشاهده مدل‌ها</a><a href="pages/contact.html" class="btn btn-ghost">ارتباط و پیگیری</a></div>
+    </section>
+    <footer class="home-footer">مرکز خرید خودرو و حواله · مرجع اطلاعات و بررسی پیش از خرید</footer>
 
 </main>
 </div>
