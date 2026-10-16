@@ -42,7 +42,7 @@
 <body class="bg-gray-50 text-gray-800 flex h-screen overflow-hidden">
 
     <!-- ================= سایدبار (راست) ================= -->
-    <aside class="w-64 bg-[#0d4a4a] text-white flex flex-col justify-between flex-shrink-0 relative overflow-hidden">
+    <aside id="siteSidebar" class="hidden md:flex w-64 bg-[#0d4a4a] text-white flex-col justify-between flex-shrink-0 relative overflow-hidden">
         <!-- لوگو -->
         <div class="p-6 text-center border-b border-white/10 relative z-10">
             <div class="flex justify-center mb-2">
@@ -90,15 +90,16 @@
     <main class="flex-1 flex flex-col overflow-y-auto relative">
         
         <!-- هدر بالای صفحه -->
-        <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 py-3 flex items-center justify-between border-b border-gray-100">
+        <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 px-4 md:px-6 py-3 flex items-center justify-between gap-3 border-b border-gray-100">
+            <button id="mobileMenuButton" type="button" class="md:hidden rounded-lg border border-gray-200 p-2 text-[#0d4a4a]" aria-label="باز کردن منو"><i data-lucide="menu" class="w-5 h-5"></i></button>
             <!-- جستجو -->
-            <div class="relative w-96">
+            <div class="relative w-full max-w-md">
                 <i data-lucide="search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
                 <input type="text" placeholder="جستجو در سایت..." class="w-full bg-gray-100 border-none rounded-full py-2.5 pr-10 pl-4 text-sm focus:ring-2 focus:ring-[#0d4a4a] focus:bg-white transition-all outline-none">
             </div>
             
             <!-- آیکون‌های سمت چپ -->
-            <div class="flex items-center gap-4">
+            <div class="hidden sm:flex items-center gap-4">
                 <button class="text-gray-500 hover:text-[#0d4a4a] transition-colors relative">
                     <i data-lucide="bell" class="w-6 h-6"></i>
                     <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
@@ -118,7 +119,7 @@
             <div class="absolute inset-0 bg-black/40"></div>
             
             <!-- متن‌های روی هیرو -->
-            <div class="absolute inset-0 flex flex-col justify-center px-12 text-white">
+            <div class="absolute inset-0 flex flex-col justify-center px-5 md:px-12 text-white">
                 <h1 class="text-2xl md:text-3xl font-bold mb-3">مرکز خرید خودرو و حواله</h1>
                 <p class="text-lg md:text-xl mb-2 font-medium">اطلاعات روشن‌تر برای تصمیم بهتر</p>
                 <p class="text-sm text-white/80">مدل‌های خودرو، بررسی حواله و راهنمای مدارک را در یک مسیر دنبال کنید.</p>
@@ -126,7 +127,7 @@
         </div>
 
         <!-- بخش اصلی فرم و ویژگی‌ها (با مارجین منفی روی هیرو می‌آید) -->
-        <div class="px-8 pb-8 -mt-24 relative z-10 max-w-6xl mx-auto w-full">
+        <div class="px-4 md:px-8 pb-8 -mt-16 md:-mt-24 relative z-10 max-w-6xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
                 <!-- ================= فرم ثبت درخواست (سمت راست - بزرگتر) ================= -->
@@ -349,7 +350,7 @@
 
         <!-- ================= فوتر ================= -->
         <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
-            <div class="max-w-6xl mx-auto px-8">
+            <div class="max-w-6xl mx-auto px-4 md:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     
                     <div class="flex flex-col items-center gap-2">
@@ -389,6 +390,16 @@
     <!-- اسکریپت راه‌اندازی آیکون‌ها -->
     <script>
         lucide.createIcons();
+        const siteSidebar = document.getElementById('siteSidebar');
+        document.getElementById('mobileMenuButton')?.addEventListener('click', () => {
+            siteSidebar.classList.toggle('hidden');
+            siteSidebar.classList.toggle('flex');
+            siteSidebar.classList.toggle('fixed');
+            siteSidebar.classList.toggle('inset-y-0');
+            siteSidebar.classList.toggle('right-0');
+            siteSidebar.classList.toggle('z-[60]');
+            siteSidebar.classList.toggle('shadow-2xl');
+        });
         const requestForm = document.getElementById('requestForm');
         const formMessage = document.getElementById('formMessage');
         let requestKind = 'vehicle';
